@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WDespachante - Sistema de Gestão para Despachante
 
-## Getting Started
+Sistema completo para gestão de serviços de despachante, incluindo agendamento online e acompanhamento de processos.
 
-First, run the development server:
+## 🚀 Estrutura do Projeto
 
+O projeto está dividido em duas partes principais:
+
+### Frontend (Next.js)
+- Localização: `/frontend`
+- Stack:
+  - Next.js 14
+  - TypeScript
+  - shadcn/ui
+  - Tailwind CSS
+
+### Backend (Supabase)
+- Localização: `/backend`
+- Stack:
+  - Supabase (PostgreSQL)
+  - Autenticação
+  - Storage
+  - Funções Edge
+
+## 🛠️ Funcionalidades Principais
+
+1. **Sistema de Agendamento Online**
+   - Calendário integrado
+   - Seleção de serviços
+   - Coleta de dados estruturados
+
+2. **Gestão de Clientes**
+   - Cadastro completo
+   - Histórico de serviços
+   - Status de documentação
+   - Comunicação integrada
+
+3. **Gestão de Serviços**
+   - Catálogo de serviços
+   - Preços dinâmicos
+   - Taxas do Detran
+   - Pacotes promocionais
+
+4. **Sistema de Vendas**
+   - Fluxo: Orçamento → Aprovação → Pedido → Execução → Finalização
+   - Cálculos automáticos
+   - Relatórios e métricas
+
+## 📦 Pré-requisitos
+
+- Node.js 18+
+- Conta no Supabase
+- Git
+
+## 🚀 Como Iniciar
+
+1. Clone o repositório
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/wcurvelo/wdespachante2.git
+cd wdespachante2
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Configure o frontend
+```bash
+cd frontend
+npm install
+cp .env.example .env.local
+# Configure as variáveis de ambiente
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Configure o backend
+```bash
+cd backend
+# Siga as instruções de configuração do Supabase
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📝 Licença
 
-## Learn More
+Este projeto é privado e de propriedade de Wellington Curvelo.
 
-To learn more about Next.js, take a look at the following resources:
+## 👤 Autor
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Wellington Curvelo**
+- 18 anos de experiência como despachante
+- Especialista em documentação veicular
+- Rio de Janeiro/RJ

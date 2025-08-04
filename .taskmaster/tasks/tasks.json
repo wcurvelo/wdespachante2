@@ -9,7 +9,7 @@
         "testStrategy": "Verify the repository is created and the folder structure is correctly set up.",
         "priority": "medium",
         "dependencies": [],
-        "status": "in-progress",
+        "status": "done",
         "subtasks": [
           {
             "id": 1,
@@ -17,7 +17,7 @@
             "description": "Initialize a new GitHub repository named 'OWDespachante'.",
             "dependencies": [],
             "details": "Log in to GitHub, create a new repository, and name it 'OWDespachante'.\n<info added on 2025-08-04T02:16:40.130Z>\nCreate the remote repository on GitHub and connect it to the existing local Git repository.\n</info added on 2025-08-04T02:16:40.130Z>",
-            "status": "in-progress",
+            "status": "done",
             "testStrategy": ""
           },
           {
@@ -26,7 +26,7 @@
             "description": "Create the basic folder structure with 'frontend' and 'backend' directories.",
             "dependencies": [],
             "details": "In the local repository, create two directories: 'frontend' and 'backend'.\n<info added on 2025-08-04T02:16:50.200Z>\nOrganize the project structure by moving the backend code into its own dedicated 'backend' directory, as the frontend is currently located in the root of the project.\n</info added on 2025-08-04T02:16:50.200Z>",
-            "status": "pending",
+            "status": "done",
             "testStrategy": ""
           },
           {
@@ -35,7 +35,7 @@
             "description": "Create a README file and a .gitignore file for Node.js.",
             "dependencies": [],
             "details": "Add a README.md file with project description and a .gitignore file to exclude node_modules and other unnecessary files.",
-            "status": "pending",
+            "status": "done",
             "testStrategy": ""
           }
         ]
@@ -225,7 +225,7 @@
     ],
     "metadata": {
       "created": "2025-08-04T01:50:13.049Z",
-      "updated": "2025-08-04T02:16:03.746Z",
+      "updated": "2025-08-04T02:23:41.283Z",
       "description": "Tasks for master context"
     }
   }
