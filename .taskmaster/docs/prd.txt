@@ -1,0 +1,183 @@
+# Overview
+O WDespachante é um projeto que combina um site moderno com um sistema SaaS para gestão de serviços de despachante veicular. O projeto visa automatizar e otimizar os processos de um despachante com 18 anos de experiência, Wellington Curvelo, atendendo clientes no Rio de Janeiro.
+
+O projeto resolve dois problemas principais:
+1. Automatização do agendamento e atendimento inicial de clientes através do site
+2. Gestão completa do negócio através do SaaS, incluindo clientes, serviços e processos
+
+# Core Features
+
+## 1. Sistema de Agendamento Online (Site)
+- Calendário integrado para agendamento de serviços
+- Coleta automática de dados dos clientes
+- Redução de 60% nas interações telefônicas iniciais
+- Integração com sistema de gestão
+
+## 2. Sistema SaaS de Gestão
+### Gestão de Clientes
+- Cadastro completo (dados pessoais + veiculares)
+- Histórico de serviços
+- Status de documentação
+- Comunicação integrada (email/WhatsApp)
+
+### Gestão de Produtos/Serviços
+- Catálogo de serviços customizável
+- Preços dinâmicos por tipo de documento
+- Taxas do Detran atualizadas
+- Pacotes promocionais
+
+### Sistema de Vendas
+- Fluxo completo: Orçamento → Aprovação → Pedido → Execução → Finalização
+- Cálculos automáticos de preços e taxas
+- Dashboard com métricas principais
+- Relatórios de vendas e status
+
+# User Experience
+
+## Personas
+
+### Persona 1: Wellington (Despachante)
+- 18 anos de experiência
+- Precisa otimizar tempo
+- Busca automatização de processos repetitivos
+- Necessita visão clara do status de cada cliente
+
+### Persona 2: Cliente Final
+- Busca praticidade no agendamento
+- Quer transparência no processo
+- Prefere agendar online (comportamento pós-COVID)
+- Necessita acompanhamento do status do serviço
+
+## Key User Flows
+1. Agendamento Online
+   - Cliente acessa site
+   - Seleciona serviço desejado
+   - Escolhe data/hora disponível
+   - Preenche dados básicos
+   - Recebe confirmação
+
+2. Gestão de Processos (SaaS)
+   - Login no sistema
+   - Dashboard com visão geral
+   - Gestão de clientes e serviços
+   - Acompanhamento de status
+   - Geração de relatórios
+
+# Technical Architecture
+
+## Stack Tecnológica
+- Frontend: Next.js 14 + TypeScript
+- UI Library: shadcn/ui + Tailwind CSS
+- Backend: Supabase (PostgreSQL + Auth + Storage)
+- Deploy: Vercel (frontend) + Supabase (backend)
+
+## Banco de Dados
+### Tabelas Principais
+- clients (dados dos clientes)
+- products (serviços oferecidos)
+- suppliers (fornecedores e parceiros)
+- quotes (orçamentos)
+- orders (pedidos)
+- order_items (itens dos pedidos)
+
+## Integrações
+- WhatsApp Business API
+- Sistema de Email
+- Gateway de Pagamento (Fase 2)
+
+# Development Roadmap
+
+## Fase 1: MVP Foundation (Semana 1)
+### Setup e Estrutura
+- Configuração do ambiente de desenvolvimento
+- Setup Supabase e estrutura inicial
+- Design system base
+
+### Core Features
+- Sistema de autenticação
+- CRUD básico de clientes
+- CRUD básico de serviços
+- Dashboard inicial
+
+## Fase 2: Business Logic (Semana 2)
+### Vendas Core
+- Sistema de orçamentos
+- Fluxo de pedidos
+- Gestão de status
+- Cálculos automáticos
+
+### Relatórios Básicos
+- Métricas principais
+- Relatórios de vendas
+- Listagens e filtros
+
+## Fase 3: Refinamento (Semana 3)
+### UX/UI Polish
+- Melhorias de interface
+- Responsividade
+- Validações e feedback
+
+### Deploy e Finalização
+- Deploy em produção
+- Testes funcionais
+- Treinamento
+- Documentação
+
+# Logical Dependency Chain
+
+1. Fundação Técnica
+   - Setup do ambiente
+   - Configuração de autenticação
+   - Estrutura do banco de dados
+
+2. Funcionalidades Core
+   - Sistema de clientes
+   - Catálogo de serviços
+   - Agendamento online
+
+3. Lógica de Negócio
+   - Sistema de orçamentos
+   - Gestão de pedidos
+   - Cálculos e taxas
+
+4. Experiência do Usuário
+   - Interface responsiva
+   - Notificações
+   - Relatórios
+
+# Risks and Mitigations
+
+## Riscos Técnicos
+1. Integração com WhatsApp API
+   - Mitigação: Começar com sistema de email e adicionar WhatsApp gradualmente
+
+2. Cálculos de Taxas
+   - Mitigação: Sistema de override manual para casos especiais
+
+3. Performance com Muitos Registros
+   - Mitigação: Implementar paginação e lazy loading desde o início
+
+## Riscos de Negócio
+1. Adaptação dos Usuários
+   - Mitigação: Interface intuitiva e treinamento inicial
+
+2. Manutenção de Dados
+   - Mitigação: Backup automático e logs de alterações
+
+# Appendix
+
+## Recursos Críticos MVP
+1. Sistema de login/senha
+2. Cadastro de clientes e serviços
+3. Fluxo de orçamento → pedido
+4. Status de pedidos
+5. Cálculos automáticos
+6. Busca e filtros
+7. Backup automático
+8. Notificações básicas
+
+## Recursos Futuros (Fase 2)
+- Integração com bancos
+- App mobile
+- Relatórios avançados
+- Integração contábil

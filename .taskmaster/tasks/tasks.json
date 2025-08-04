@@ -1,0 +1,232 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Setup Project Repository",
+        "description": "Initialize the project repository on GitHub and set up the basic folder structure for the frontend and backend.",
+        "details": "Create a new GitHub repository named 'OWDespachante'. Set up a folder structure with 'frontend' and 'backend' directories. Initialize a README file and a .gitignore for Node.js.",
+        "testStrategy": "Verify the repository is created and the folder structure is correctly set up.",
+        "priority": "medium",
+        "dependencies": [],
+        "status": "in-progress",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create GitHub Repository",
+            "description": "Initialize a new GitHub repository named 'OWDespachante'.",
+            "dependencies": [],
+            "details": "Log in to GitHub, create a new repository, and name it 'OWDespachante'.\n<info added on 2025-08-04T02:16:40.130Z>\nCreate the remote repository on GitHub and connect it to the existing local Git repository.\n</info added on 2025-08-04T02:16:40.130Z>",
+            "status": "in-progress",
+            "testStrategy": ""
+          },
+          {
+            "id": 2,
+            "title": "Set Up Folder Structure",
+            "description": "Create the basic folder structure with 'frontend' and 'backend' directories.",
+            "dependencies": [],
+            "details": "In the local repository, create two directories: 'frontend' and 'backend'.\n<info added on 2025-08-04T02:16:50.200Z>\nOrganize the project structure by moving the backend code into its own dedicated 'backend' directory, as the frontend is currently located in the root of the project.\n</info added on 2025-08-04T02:16:50.200Z>",
+            "status": "pending",
+            "testStrategy": ""
+          },
+          {
+            "id": 3,
+            "title": "Initialize README and .gitignore",
+            "description": "Create a README file and a .gitignore file for Node.js.",
+            "dependencies": [],
+            "details": "Add a README.md file with project description and a .gitignore file to exclude node_modules and other unnecessary files.",
+            "status": "pending",
+            "testStrategy": ""
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Configure Development Environment",
+        "description": "Set up the local development environment for Next.js and Supabase.",
+        "details": "Install Node.js, Next.js, and Supabase CLI. Create a new Next.js project using 'npx create-next-app'. Configure Supabase by creating a new project on Supabase.io and connecting it to the local environment.",
+        "testStrategy": "Ensure that the Next.js application runs locally and can connect to Supabase.",
+        "priority": "medium",
+        "dependencies": [
+          1
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 3,
+        "title": "Setup Supabase Database",
+        "description": "Create the initial database schema in Supabase according to the PRD requirements.",
+        "details": "Use Supabase SQL editor to create tables: clients, products, suppliers, quotes, orders, and order_items. Define relationships and constraints as per the PRD.",
+        "testStrategy": "Run SQL queries to ensure tables are created correctly and relationships are established.",
+        "priority": "high",
+        "dependencies": [
+          2
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 4,
+        "title": "Implement Authentication System",
+        "description": "Develop a user authentication system using Supabase Auth.",
+        "details": "Integrate Supabase Auth into the Next.js application. Create login and registration pages. Use Supabase's built-in authentication methods.",
+        "testStrategy": "Test user registration and login functionalities to ensure users can authenticate successfully.",
+        "priority": "high",
+        "dependencies": [
+          3
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 5,
+        "title": "Create Client Management CRUD",
+        "description": "Implement the CRUD operations for managing clients in the system.",
+        "details": "Develop API endpoints in the backend for creating, reading, updating, and deleting client records. Use Supabase's database functions for data manipulation.",
+        "testStrategy": "Perform unit tests on the CRUD operations to ensure they work as expected.",
+        "priority": "high",
+        "dependencies": [
+          4
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 6,
+        "title": "Create Service Management CRUD",
+        "description": "Implement the CRUD operations for managing services offered by the despachante.",
+        "details": "Develop API endpoints for managing services, similar to the client management CRUD. Ensure services can be added, updated, and deleted.",
+        "testStrategy": "Test the service management functionalities to confirm they operate correctly.",
+        "priority": "high",
+        "dependencies": [
+          5
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 7,
+        "title": "Develop Online Scheduling System",
+        "description": "Create the online scheduling system for clients to book services.",
+        "details": "Integrate a calendar component in the frontend using a library like react-calendar. Allow clients to select services and book appointments.",
+        "testStrategy": "Simulate client interactions to ensure appointments can be scheduled and confirmed.",
+        "priority": "high",
+        "dependencies": [
+          6
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 8,
+        "title": "Implement Dynamic Pricing Logic",
+        "description": "Create logic for dynamic pricing based on service type and Detran fees.",
+        "details": "Develop a pricing model that adjusts based on the type of document and current Detran fees. Store pricing data in the products table.",
+        "testStrategy": "Test pricing calculations with various service types to ensure accuracy.",
+        "priority": "medium",
+        "dependencies": [
+          7
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 9,
+        "title": "Create Sales Workflow",
+        "description": "Implement the complete sales workflow from quote to order execution.",
+        "details": "Develop the workflow for creating quotes, converting them to orders, and tracking their status. Ensure all steps are logged in the database.",
+        "testStrategy": "Test the entire sales workflow to ensure each step transitions smoothly.",
+        "priority": "high",
+        "dependencies": [
+          8
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 10,
+        "title": "Build Dashboard for Metrics",
+        "description": "Create a dashboard that displays key metrics and sales reports.",
+        "details": "Use a charting library like Chart.js to visualize sales data and key metrics. Ensure the dashboard is user-friendly and provides real-time updates.",
+        "testStrategy": "Verify that the dashboard displays accurate metrics and updates in real-time.",
+        "priority": "medium",
+        "dependencies": [
+          9
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 11,
+        "title": "Implement Email Notification System",
+        "description": "Set up an email notification system for client communications.",
+        "details": "Integrate an email service (e.g., SendGrid) to send notifications for appointment confirmations and updates.",
+        "testStrategy": "Test email notifications to ensure they are sent and received correctly.",
+        "priority": "medium",
+        "dependencies": [
+          10
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 12,
+        "title": "Enhance User Interface with Tailwind CSS",
+        "description": "Apply Tailwind CSS for styling the frontend components to ensure a modern look.",
+        "details": "Install Tailwind CSS and apply styles to all components, ensuring responsiveness and accessibility.",
+        "testStrategy": "Review the UI for consistency and responsiveness across different devices.",
+        "priority": "medium",
+        "dependencies": [
+          11
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 13,
+        "title": "Conduct Functional Testing",
+        "description": "Perform comprehensive functional testing on all implemented features.",
+        "details": "Create test cases for each feature and execute them to ensure all functionalities work as intended.",
+        "testStrategy": "Document test results and fix any identified issues.",
+        "priority": "high",
+        "dependencies": [
+          12
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 14,
+        "title": "Prepare for Production Deployment",
+        "description": "Finalize the application for deployment on Vercel and Supabase.",
+        "details": "Ensure all code is pushed to the main branch, configure Vercel for frontend deployment, and Supabase for backend services.",
+        "testStrategy": "Deploy the application and verify that it runs correctly in the production environment.",
+        "priority": "high",
+        "dependencies": [
+          13
+        ],
+        "status": "pending",
+        "subtasks": []
+      },
+      {
+        "id": 15,
+        "title": "Create Documentation and Training Materials",
+        "description": "Develop user documentation and training materials for end-users.",
+        "details": "Create a user guide and training materials that explain how to use the system effectively.",
+        "testStrategy": "Review documentation with potential users to ensure clarity and completeness.",
+        "priority": "medium",
+        "dependencies": [
+          14
+        ],
+        "status": "pending",
+        "subtasks": []
+      }
+    ],
+    "metadata": {
+      "created": "2025-08-04T01:50:13.049Z",
+      "updated": "2025-08-04T02:16:03.746Z",
+      "description": "Tasks for master context"
+    }
+  }
+}
